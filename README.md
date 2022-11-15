@@ -1,6 +1,11 @@
+# ada-2022-project-brian
+ada-2022-project-brian created by GitHub Classroom
+
+___ 
+
 # Title: What’s the perfect beer (for me) ?
 
-## Abstract: (up to 150 words)
+## Abstract:
 The purpose of the program will be matching a person with a beer in function of his review and from biases. At the end the reader will receive the name of his “perfect beer” and some information about it like the style of the beer and the name of the brewery. The way of finding this beer is explained in the method part. However, there is a chance that this “perfect beer” doesn’t exist.
 
 ## Research questions: 
@@ -10,7 +15,7 @@ The purpose of the program will be matching a person with a beer in function of 
 	3. How users are distributed across the world? 
 		1. Are they uniformely correlated with the contries population and/or beer production?
 	4. Are there any region where users are more actively?
-		1. Can we associate them with being more beer enthusists? \
+		1. Can we associate them with being more beer enthusists? 
 	5. Is there any metrics we can develop to indicate the users' expertise, and the degree that she/he is a beer enthusiast? 
 		1. (e.g. the number of reviews in the platform, how her/his reviews deviate from the average, etc..)
 		2. Is this level of beer appreatiation correlated with any specific countries/regions?
@@ -32,6 +37,8 @@ For each section of the project, specific steps and methods are here outlined, c
 
 ### Worldwide trends 
 
+text here
+
 ### Individual preferences
 Here, firstly, some metrics will be put in place in order to relate the users' reviews history with their personal preferences regarding beer style and/or beer country. They are initially though to be intimately related to the the scores the user gives on avarage for each beer style and each beer country, as well as the frequency that the user makes a review in each of these categories. Therefore, different variables can be generated for each user, regarding statistical metrics of both the *frequency* and *scores* of his/her reviews history, being related to its personal preferences in therms of beer style and country of origin.
 Then, using appropriate statistical tests, the relationship of these generated markers for individual preferences can be tested against other variables of interest. For example, to test whether individuals prefer beers from their own country, we can perform a statistical test between the individuals' metrics of "favorite beer country" against the individuals' own country of origin, to identify possible correlations not explainable by the null hypothesis.
@@ -39,8 +46,11 @@ Finally, here we want to investigate whether the individuals' reviews of beers a
 
 ### Analysis of beer attributes
 
+text here
+
 ### Recommendation system
 
+text here
 
 ## Organization within the team
 The organization of the research questions througout the project was made in such a way to minimize the interferance between self contained topics, while connecting in a cohesive datastory. For this reason, the topics of research are divided among the indivuduals of the group in the following form:
