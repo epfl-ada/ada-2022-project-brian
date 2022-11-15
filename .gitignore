@@ -246,3 +246,7 @@ fabric.properties
 DATA/
 
 # End of https://www.toptal.com/developers/gitignore/api/pycharm
+
+sandbox/
+
+.gitignore
