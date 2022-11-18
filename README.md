@@ -6,7 +6,7 @@ ___
 # Title: What’s the perfect beer (for me) ?
 
 ## Abstract:
-The purpose of the program will be matching a person with a beer in function of his review and from biases. At the end the reader will receive the name of his “perfect beer” and some information about it like the style of the beer and the name of the brewery. The way of finding this beer is explained in the method part. However, there is a chance that this “perfect beer” doesn’t exist.
+The purpose of the program will be to use data from different sources of beer review websites to gain a larger understanding of how beer is appreciated around the world. One of the central topics revolves around detecting different trends in preferences and possible biases from beer consumers in different regions. Finally, the knowledge gained in this data analysis is planned to be applied in a recommendation model, in which the reader will be able to receive recommendations of his next “perfect beer”, dependent on information provided by him, such as beers already tried, preferred style of beer and origin.
 
 ## Research questions: 
 1. **General trends worldwide**
