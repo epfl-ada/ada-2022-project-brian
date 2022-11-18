@@ -16,9 +16,6 @@ The purpose of the program will be to use data from different sources of beer re
 		1. Are they uniformely correlated with the contries population and/or beer production?
 	4. Are there any region where users are more actively?
 		1. Can we associate them with being more beer enthusists? 
-	5. Is there any metrics we can develop to indicate the users' expertise, and the degree that she/he is a beer enthusiast? 
-		1. (e.g. the number of reviews in the platform, how her/his reviews deviate from the average, etc..)
-		2. Is this level of beer appreatiation correlated with any specific countries/regions?
 2. **Analysis of user preferences**
 	1. Can we develop metrics that are associated with users' individual preferences? E.g. preferences of beers with a certain style or from a certain country/region.
 	2. How are these users preferences associated with the origin of the reviewer? Does they have any biases for prefering beers / styles original from their own country?
