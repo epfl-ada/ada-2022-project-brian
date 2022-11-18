@@ -50,7 +50,27 @@ text here
 
 ### Recommendation system
 
-text here
+After doing all our analysis the goal would be to implement a recommender system to conclude our story.
+
+What is even a recommender system ?
+
+According to Wikipedia : "A recommender system, or a recommendation system (sometimes replacing 'system' with a synonym such as platform or engine), is a subclass of information filtering system that provide suggestions for items that are most pertinent to a particular user." https://en.wikipedia.org/wiki/Recommender_system
+
+So the goal is here would be to recommend a beer for a user giving his past review, i.e., his "taste".
+
+There is plenty of way to implent this system. After searching for a method it seems that the user-based collaborative filtering looks like the way to do regarding our dataset.
+
+User-based collaborative filtering can be split in two step :
+
+1) Look for users who share the same **rating** patterns with the active user (the user whom the prediction is for).
+2) Use the ratings from those like-minded users found in step 1 to **calculate a prediction** for the active user
+https://en.wikipedia.org/wiki/Collaborative_filtering#Methodology
+
+The fist step use a k-NN algorithm to select the top K users who share the same rating patterns. To performs a k-NN one must choose two important parameters : k and the similarity metric.
+
+The second step is based on the next formula to predict the rate of the active user x for a beer i rated by all the user y in K:
+
+$$r_{x,i}={\bar {r_{x}}}+k\sum \limits _{y\in K}\operatorname {simil} (x,y)(r_{y,i}-{\bar {r_{y}}})$$
 
 ## Organization within the team
 The organization of the research questions througout the project was made in such a way to minimize the interferance between self contained topics, while connecting in a cohesive datastory. For this reason, the topics of research are divided among the indivuduals of the group in the following form:
