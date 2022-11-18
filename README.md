@@ -70,9 +70,9 @@ The fist step use a k-NN algorithm to select the top K users who share the same 
 
 The second step is based on the next formula to predict the rate of the active user x for a beer i rated by all the user y in K:
 
-$$r_{x,i}={\bar {r_{x}}}+k\sum \limits _{y\in K}\operatorname {simil} (x,y)(r_{y,i}-{\bar {r_{y}}})$$
+$$r_{x,i}={\bar {r_{x}}}+k\sum \limits _{y\in K}\operatorname {simil} (x,y)(r_{y,i}-{\bar {r_{y}}})$$ https://arxiv.org/abs/1301.7363
 
-Where $r_{x,i}$ is the predicted rate for beer i for the active user $x$, ${\bar {r_{x}}}$ is the mean vote for user $x$, $k$ is a normalizing vector, $\operatorname {simil} (x,y)$ is the Pearson correlation used in the k-NN algorithm to calculate the similarity (i.e, inverse of distance).
+Where $r_{x,i}$ is the predicted rate for beer i for the active user $x$, ${\bar {r_{x}}}$ is the mean vote for user $x$, $k$ is a normalizing vector, $\operatorname {simil} (x,y)$ is the Pearson correlation used in the k-NN algorithm to calculate the similarity (i.e, inverse of distance). 
 
 ## Organization within the team
 The organization of the research questions througout the project was made in such a way to minimize the interferance between self contained topics, while connecting in a cohesive datastory. For this reason, the topics of research are divided among the indivuduals of the group in the following form:
