@@ -91,3 +91,6 @@ Considering the starting date of the P3 phase as the of the P2 deadline, there a
 2. Data analysis, target at answering the research questions from each topic, as well as generation of plots and images: week 2 and 3
 3. Writting of the conclusions in the form of a datastory? week 4
 4. Migration of the results and written text to a visualization platform and final review of the complete datastory: week 5  
+
+##Questions for the TA:
+Concerning part 4, does the choice of the features and outcome looks correct ?
