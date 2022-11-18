@@ -70,7 +70,7 @@ The fist step use a k-NN algorithm to select the top K users who share the same 
 
 The second step is based on the next formula to predict the rate of the active user x for a beer i rated by all the user y in K:
 
-$$r_{x,i}={\bar {r_{x}}}+k\sum \limits _{y\in K}\operatorname {simil} (x,y)(r_{y,i}-{\bar {r_{y}}})$$
+$$r_{x,i}={\bar {r_{x}}}+k{\sum \limits _{y\in K}}\operatorname {simil} (x,y)(r_{y,i}-{\bar {r_{y}}})$$
 
 https://arxiv.org/abs/1301.7363
 
