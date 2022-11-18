@@ -12,10 +12,9 @@ The purpose of the program will be to use data from different sources of beer re
 1. **General trends worldwide**
 	1. Is beer appreatiated in the same form across the world?
 	2. How beer production is distributed around the globe? (As a matter of countries and regions)
-	3. How users are distributed across the world? 
-		1. Are they uniformely correlated with the contries population and/or beer production?
-	4. Are there any region where users are more actively?
-		1. Can we associate them with being more beer enthusists? 
+	3. How users are distributed across the world?
+		1. Are there any region where users are more actively?
+		2. Are they uniformely correlated with the contries population and/or beer production?
 2. **Analysis of user preferences**
 	1. Can we develop metrics that are associated with users' individual preferences? E.g. preferences of beers with a certain style or from a certain country/region.
 	2. How are these users preferences associated with the origin of the reviewer? Does they have any biases for prefering beers / styles original from their own country?
