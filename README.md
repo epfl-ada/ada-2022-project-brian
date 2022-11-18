@@ -46,7 +46,9 @@ Finally, here we want to investigate whether the individuals' reviews of beers a
 
 ### Analysis of beer attributes
 
-text here
+The data provided by one of the beer reviews website offers individual ratings for each of the following beer attribute: appearance, aroma, palate, taste. What we want to do here is to analyse if any of these attributes has a particularly stronger influence over the overall rating of the beer, and whether it varies over beer style or country.
+
+In the exploratory analysis provided in the notebook, a preliminary paired t-test was made for each attribute and final rating, for a sample the ratings available in the dataset. We can see that no trend exists for the general case (i.e. comparing all the beer styles and ratings). Throughout this project, this analysis will be extended with other statistical tests, to emcompass i) all the data from the ratings provided, ii) analysis over a beer style basis, to check if any of the beer attributes is more relevant in each case and iii) analysis according the country/region of origin of the reviewer, to check if there are any preferences which change accordingly.   
 
 ### Recommendation system
 
