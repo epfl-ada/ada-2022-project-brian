@@ -12,10 +12,9 @@ The purpose of the program will be to use data from different sources of beer re
 1. **General trends worldwide**
 	1. Is beer appreatiated in the same form across the world?
 	2. How beer production is distributed around the globe? (As a matter of countries and regions)
-	3. How users are distributed across the world? 
-		1. Are they uniformely correlated with the contries population and/or beer production?
-	4. Are there any region where users are more actively?
-		1. Can we associate them with being more beer enthusists? 
+	3. How users are distributed across the world?
+		1. Are there any region where users are more actively?
+		2. Are they uniformely correlated with the contries population and/or beer production?
 2. **Analysis of user preferences**
 	1. Can we develop metrics that are associated with users' individual preferences? E.g. preferences of beers with a certain style or from a certain country/region.
 	2. How are these users preferences associated with the origin of the reviewer? Does they have any biases for prefering beers / styles original from their own country?
@@ -34,12 +33,14 @@ For each section of the project, specific steps and methods are here outlined, c
 
 ### Worldwide trends 
 
-text here
+To begin with, it seems important to have a global vision of the repartition of beers and users beforehand when analyzing if users usually prefer a beer from their own country. In fact, if the majority of the data are from the US, this would have an impact on our analysis.
+In order to do this, a treemap can be used to model the world with all the countries whose size depends on the number of beers the country offers or depends on the number of “active” users. In this way, we can also see if the more beer a country offers, the more active a country is. A threshold on the number of reviews or grades can be used to define an “active” user.
+
 
 ### Individual preferences
-Here, firstly, some metrics will be put in place in order to relate the users' reviews history with their personal preferences regarding beer style and/or beer country. They are initially though to be intimately related to the the scores the user gives on avarage for each beer style and each beer country, as well as the frequency that the user makes a review in each of these categories. Therefore, different variables can be generated for each user, regarding statistical metrics of both the *frequency* and *scores* of his/her reviews history, being related to its personal preferences in therms of beer style and country of origin.
+Here, firstly, some metrics will be put in place in order to relate the users' reviews history with their personal preferences regarding beer style and/or beer country. They are initially thought to be intimately related to the scores the user gives on average for each beer style and each beer country, as well as the frequency that the user makes a review in each of these categories. Therefore, different variables can be generated for each user, regarding statistical metrics of both the *frequency* and *scores* of his/her reviews history, being related to its personal preferences in terms of beer style and country of origin.
 Then, using appropriate statistical tests, the relationship of these generated markers for individual preferences can be tested against other variables of interest. For example, to test whether individuals prefer beers from their own country, we can perform a statistical test between the individuals' metrics of "favorite beer country" against the individuals' own country of origin, to identify possible correlations not explainable by the null hypothesis.
-Finally, here we want to investigate whether the individuals' reviews of beers are affected by possible confounding factors, such as, whether there are reviewers in locations with limited access of various beer types/origins, which could possible present a "distorted" view on the individual's preferences. Here, a initial ideia is to compare the different metrics against themselves. E.g. to answer the question: *"Do individuals prefer beers from their own country because these are the ones they have access to?* , we can confront the origin of the beers which are most frequently tasted by the given individual with the origin of the beers which are most highly rated by the same individual. If they are not equal, this could indicate that the meaningfull aswer to the question above would be *"no"*.
+Finally, here we want to investigate whether the individuals' reviews of beers are affected by possible confounding factors, such as, whether there are reviewers in locations with limited access of various beer types/origins, which could possibly present a "distorted" view on the individual's preferences. Here, an initial idea is to compare the different metrics against themselves. E.g. to answer the question: *"Do individuals prefer beers from their own country because these are the ones they have access to?"*, we can confront the origin of the beers which are most frequently tested by the given individual with the origin of the beers which are most highly rated by the same individual. If they are not equal, this could indicate that the meaningful answer to the question above would be *"no"*.
 
 ### Analysis of beer attributes
 
