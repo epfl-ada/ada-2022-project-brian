@@ -244,6 +244,7 @@ fabric.properties
 .idea/**/azureSettings.xml
 
 DATA/
+.idea/
 
 # End of https://www.toptal.com/developers/gitignore/api/pycharm
 
