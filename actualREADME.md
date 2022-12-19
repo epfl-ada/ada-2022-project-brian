@@ -1,9 +1,14 @@
+# ada-2022-project-brian
+ada-2022-project-brian created by GitHub Classroom
+
+___ 
+
 # Title: What’s the perfect beer (for me) ?
 
 ## Abstract:
 The purpose of the program will be to use data from different sources of beer review websites to gain a larger understanding of how beer is appreciated around the world. One of the central topics revolves around detecting different trends in preferences and possible biases from beer consumers in different regions. Finally, the knowledge gained in this data analysis is planned to be applied in a recommendation model, in which the reader will be able to receive recommendations of his next “perfect beer”, dependent on information provided by him, such as beers already tried, preferred style of beer and origin.
 
-## Research questions:
+## Research questions: 
 1. **General trends worldwide**
 	1. For how many of the countries we have enough data to proceed?
 	2. How breweries are distributed around the globe? (As a matter of countries and regions)
@@ -17,18 +22,18 @@ The purpose of the program will be to use data from different sources of beer re
 	2. How are these users preferences associated with the origin of the reviewer? Does they have any biases for prefering beers / styles original from their own country?
 	3. Can we distinguish the real user preferences from possible confounders? E.g. the (possibly restricted) range of offer of beers brands/types in certain regions?
 3. **Analysis of beer attributes**
-	In the dataset, we have information about ratings accross *attributes* (e.g. appearance, aroma, etc...).
+	In the dataset, we have information about ratings accross *attributes* (e.g. appearance, aroma, etc...). 
 	1. Is any of these attributes more important for the final evaluation of the beer?
 	2. Does this most important attribute varies across regions/countries and beer styles?
 4. **Recommendation system**
 	1. With all the knowledge gained in this analysis, can we build a recommendation system for suggesting beer products for new users?
-	2. That is, can available features, e.g. nationality, favorite beer style and preffered beer attribute, be used to "predict" or "suggest" new beers for the person which is reading our datastory?
+	2. That is, can available features, e.g. nationality, favorite beer style and preffered beer attribute, be used to "predict" or "suggest" new beers for the person which is reading our datastory? 
 
 
 ## Methods
 For each section of the project, specific steps and methods are here outlined, corresponding to the research questions that our datastory will aim at answering.
 
-### Worldwide trends
+### Worldwide trends 
 
 To begin with, it seems important to have a global vision of the repartition of breweries and users beforehand when analyzing if users usually prefer a beer from their own country. In fact, if the majority of the data are from the US, this would have an impact on our analysis.
 It will also be possible to see if the number of breweries in a contry and the average of beers by country are corraleted with the 'enthousiasm' of users. In fact, it will help us to say, for the following, if a person preferences will be impacted by his region namely the choice of beers in the region and so what people drink in the country. A threshold on the number of reviews or grades can be used to define an “active” and "enthusiastic" user.
@@ -71,4 +76,23 @@ $$r_{x,i}={\bar {r_{x}}}+k{\sum \limits _{y\in K}}{\operatorname {simil}(x,y)}(r
 
 https://arxiv.org/abs/1301.7363
 
-Where $r_{x,i}$ is the predicted rate for beer i for the active user $x$, ${\bar {r_{x}}}$ is the mean vote for user $x$, $k$ is a normalizing vector, $\operatorname {simil} (x,y)$ is the Euclidean distance (to keep it simple) used in the k-NN algorithm to calculate the similarity (i.e, inverse of distance).
+Where $r_{x,i}$ is the predicted rate for beer i for the active user $x$, ${\bar {r_{x}}}$ is the mean vote for user $x$, $k$ is a normalizing vector, $\operatorname {simil} (x,y)$ is the Euclidean distance (to keep it simple) used in the k-NN algorithm to calculate the similarity (i.e, inverse of distance). 
+
+## Organization within the team
+The organization of the research questions througout the project was made in such a way to minimize the interferance between self contained topics, while connecting in a cohesive datastory. For this reason, the topics of research are divided among the indivuduals of the group in the following form:
+
+1. Worldwide trends:
+2. Analysis of user's preferences: Gabriel
+3. Analysis of beer attributes:
+4. Recommendation system:
+
+## Proposed timeline
+Considering the starting date of the P3 phase as the of the P2 deadline, there are 5 weeks to be planed, which can be divided as follows:
+
+1. Dataset merging, cleaning and preparation: week 1
+2. Data analysis, target at answering the research questions from each topic, as well as generation of plots and images: week 2 and 3
+3. Writting of the conclusions in the form of a datastory? week 4
+4. Migration of the results and written text to a visualization platform and final review of the complete datastory: week 5  
+
+## Questions for the TA:
+Concerning part 4, does the choice of the features and outcome looks correct ?
