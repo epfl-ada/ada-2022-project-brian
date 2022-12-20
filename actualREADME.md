@@ -78,21 +78,13 @@ https://arxiv.org/abs/1301.7363
 
 Where $r_{x,i}$ is the predicted rate for beer i for the active user $x$, ${\bar {r_{x}}}$ is the mean vote for user $x$, $k$ is a normalizing vector, $\operatorname {simil} (x,y)$ is the Euclidean distance (to keep it simple) used in the k-NN algorithm to calculate the similarity (i.e, inverse of distance). 
 
-## Organization within the team
-The organization of the research questions througout the project was made in such a way to minimize the interferance between self contained topics, while connecting in a cohesive datastory. For this reason, the topics of research are divided among the indivuduals of the group in the following form:
+## Setup and Instructions
 
-1. Worldwide trends:
-2. Analysis of user's preferences: Gabriel
-3. Analysis of beer attributes:
-4. Recommendation system:
+In order for all results from the main jupyter notebook to be reproducible, this repository contains the datasets used in the analysis in the `/datasets` folder, except for the `reviews.txt` files of both beer databases (BeerAdvocate and RateBeer). These have proven to be too large to be store in the GitHub repository, so further care had to be taken in order to unsure that the data contained in this file could still be used.
 
-## Proposed timeline
-Considering the starting date of the P3 phase as the of the P2 deadline, there are 5 weeks to be planed, which can be divided as follows:
+For this reason, the dataset of reviews has to be read from a file stored locally (not contained in the repository), before rerunning the analysis where such data is needed. In order to do so, we provide python scripts, in the `/parse_reviews` folder, that take the location of the `reviews.txt` file, as well as the fields of the ratings to be parsed, and returns a `json` file with all the requested data properly parsed.
 
-1. Dataset merging, cleaning and preparation: week 1
-2. Data analysis, target at answering the research questions from each topic, as well as generation of plots and images: week 2 and 3
-3. Writting of the conclusions in the form of a datastory? week 4
-4. Migration of the results and written text to a visualization platform and final review of the complete datastory: week 5  
+As the text files are large (more than 165 million lines combined), in order to circunvent kernel freezes and other technical problems faced during the data analysis, we decided to split the parsed `json` files and zip them before loading them to memory in the pandas `DataFrames`. The splitting of the files is handled automatically in the `/parse_reviews/parse_reviews_with_file_split.py` python script, and the splitted datasets are loaded separetely, as seen in the main notebook.
 
-## Questions for the TA:
-Concerning part 4, does the choice of the features and outcome looks correct ?
+Moreover, when not stated otherwise in the jupyter notebook, all the other data used in the data analysis can be directly loaded by running the code cells in the part of the analysis they belong to. When further data transformation was perform outside the notebook (for performance bottleneck reasons) they are mentioned explicitly, along with the code to reproduce this operation.
+
