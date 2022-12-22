@@ -60,23 +60,15 @@ According to Wikipedia : "A recommender system, or a recommendation system (some
 
 So the goal is here would be to recommend a beer for a user giving his past review, i.e., his "taste".
 
-There is plenty of way to implent this system. After searching for a method it seems that the user-based collaborative filtering looks like the way to do regarding our dataset.
+Singular Value Decomposition (SVD) is a matrix factorization technique that is often used in the field of recommendation systems to predict the ratings that users would give to items they have not yet rated.
 
-User-based collaborative filtering can be split in two step :
+In collaborative filtering, we try to predict the ratings that a user would give to an item based on the ratings that similar users have given to that item. One way to do this is to use SVD to decompose the ratings matrix into the product of three matrices: a user matrix, a singular matrix, and an item matrix.
 
-1) Look for users who share the same **rating** patterns with the active user (the user whom the prediction is for).
-2) Use the ratings from those like-minded users found in step 1 to **calculate a prediction** for the active user
-https://en.wikipedia.org/wiki/Collaborative_filtering#Methodology
+The user matrix and the item matrix both contain latent factors that represent the preferences of the users and the characteristics of the items, respectively. These latent factors are derived from the ratings matrix through the SVD process.
 
-The fist step use a k-NN algorithm to select the top K users who share the same rating patterns. To performs a k-NN one must choose two important parameters : k and the similarity metric.
+To make a prediction for a given user and item, we can take the dot product of the latent factors for that user and item. This dot product gives us a predicted rating for the user-item pair.
 
-The second step is based on the next formula to predict the rate of the active user x for a beer i rated by all the user y in K:
-
-$$r_{x,i}={\bar {r_{x}}}+k{\sum \limits _{y\in K}}{\operatorname {simil}(x,y)}(r_{y,i}-{\bar {r_{y}}})$$
-
-https://arxiv.org/abs/1301.7363
-
-Where $r_{x,i}$ is the predicted rate for beer i for the active user $x$, ${\bar {r_{x}}}$ is the mean vote for user $x$, $k$ is a normalizing vector, $\operatorname {simil} (x,y)$ is the Euclidean distance (to keep it simple) used in the k-NN algorithm to calculate the similarity (i.e, inverse of distance). 
+The SVD method can be used to handle missing values in the ratings matrix, which is common in real-world recommendation systems where many users have not rated many items. By decomposing the ratings matrix into latent factors, we can fill in the missing values and make predictions for all the user-item pairs, even those that have not been rated.
 
 ## Setup and Instructions
 
