@@ -72,11 +72,10 @@ The SVD method can be used to handle missing values in the ratings matrix, which
 
 ## Setup and Instructions
 
-In order for all results from the main jupyter notebook to be reproducible, this repository contains the datasets used in the analysis in the `/datasets` folder, except for the `reviews.txt` files of both beer databases (BeerAdvocate and RateBeer). These have proven to be too large to be store in the GitHub repository, so further care had to be taken in order to unsure that the data contained in this file could still be used.
+In order for all results from the main jupyter notebook to be reproducible, this repository contains the datasets used in the analysis in the `/datasets` folder, except for the `reviews.txt` files of both beer databases (BeerAdvocate and RateBeer). These have proven to be too large to be store in the GitHub repository as they are, so further care had to be taken in order to unsure that the data contained in this file could still be used.
 
 For this reason, the dataset of reviews has to be read from a file stored locally (not contained in the repository), before rerunning the analysis where such data is needed. In order to do so, we provide python scripts, in the `/parse_reviews` folder, that take the location of the `reviews.txt` file, as well as the fields of the ratings to be parsed, and returns a `json` file with all the requested data properly parsed.
 
 As the text files are large (more than 165 million lines combined), in order to circunvent kernel freezes and other technical problems faced during the data analysis, we decided to split the parsed `json` files and zip them before loading them to memory in the pandas `DataFrames`. The splitting of the files is handled automatically in the `/parse_reviews/parse_reviews_with_file_split.py` python script, and the splitted datasets are loaded separetely, as seen in the main notebook.
 
-Moreover, when not stated otherwise in the jupyter notebook, all the other data used in the data analysis can be directly loaded by running the code cells in the part of the analysis they belong to. When further data transformation was perform outside the notebook (for performance bottleneck reasons) they are mentioned explicitly, along with the code to reproduce this operation.
-
+However, after this, all the data used in the data analysis can be directly loaded by running the code cells in the part of the analysis they belong to.
