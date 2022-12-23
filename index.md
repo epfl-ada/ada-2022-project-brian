@@ -33,26 +33,19 @@ With a bit of malt, linear regression, water, and dataframes we can extract the 
 
 ![If beer tastes better it tastes better, whodathunkit](/adapassets/correlations.png)
 
+This is a general trend though, when divided by country it changes a lot:
+
+![Beer appreciation is culturally dependent, but mine's best](/adapassets/correlations.png)
+
+Palate and taste clearly come out ahead(it'd be clearer if we kept the same x-axis scale everywhere) But even then, that swings rather wildly and we're likely to see this variability pop up again if we divide countries in demographic/cultural subgroups, but we'll just assume your contry of origin predict exactly how you like your beer.
+
 ### Beercommendation system
 
 After doing all our analysis the goal would be to implement a recommender system to conclude our story.
 
-What is even a recommender system ?
+Well, what are you doing here?
 
-According to Wikipedia : "A recommender system, or a recommendation system (sometimes replacing 'system' with a synonym such as platform or engine), is a subclass of information filtering system that provide suggestions for items that are most pertinent to a particular user." https://en.wikipedia.org/wiki/Recommender_system
-
-So the goal is here would be to recommend a beer for a user giving his past review, i.e., his "taste".
-
-Singular Value Decomposition (SVD) is a matrix factorization technique that is often used in the field of recommendation systems to predict the ratings that users would give to items they have not yet rated.
-
-In collaborative filtering, we try to predict the ratings that a user would give to an item based on the ratings that similar users have given to that item. One way to do this is to use SVD to decompose the ratings matrix into the product of three matrices: a user matrix, a singular matrix, and an item matrix.
-
-The user matrix and the item matrix both contain latent factors that represent the preferences of the users and the characteristics of the items, respectively. These latent factors are derived from the ratings matrix through the SVD process.
-
-To make a prediction for a given user and item, we can take the dot product of the latent factors for that user and item. This dot product gives us a predicted rating for the user-item pair.
-
-The SVD method can be used to handle missing values in the ratings matrix, which is common in real-world recommendation systems where many users have not rated many items. By decomposing the ratings matrix into latent factors, we can fill in the missing values and make predictions for all the user-item pairs, even those that have not been rated.
-
+It's in the notebook, go play with it, it was a lot of work.
 ### Conclusion
 
 ~~Cider tastes better actually~~
