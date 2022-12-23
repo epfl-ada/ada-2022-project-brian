@@ -13,7 +13,7 @@ So, first off, on top of all the reviews being written by biased folk, there's p
 
 ![Internet and beer access rarely match](/adapassets/brewerybycountries.png)
 
-As we can see, some very internat starved countries have a lot of reviews, and others have the opposite problem, we also notice that the US scores top in both.
+As we can see, some very internet starved countries have a lot of reviews, and others have the opposite problem, we also notice that the US scores top in both.
 
 ### Everyone is steeping but me
 Here, firstly, some metrics will be put in place in order to relate the users' reviews history with their personal preferences regarding beer style and/or beer country. They are initially thought to be intimately related to the scores the user gives on average for each beer style and each beer country, as well as the frequency that the user makes a review in each of these categories. Therefore, different variables can be generated for each user, regarding statistical metrics of both the *frequency* and *scores* of his/her reviews history, being related to its personal preferences in terms of beer style and country of origin.
