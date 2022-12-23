@@ -1,6 +1,7 @@
 # ada-2022-project-brian
 ada-2022-project-brian created by GitHub Classroom
 
+Our datastory is on https://epfl-ada.github.io/brian/
 ___
 
 # Title: What’s the perfect beer (for me) ?
