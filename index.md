@@ -13,20 +13,25 @@ So, first off, on top of all the reviews being written by biased folk, there's p
 
 ![Internet and beer access rarely match](/adapassets/brewerybycountries.png)
 
-As we can see, some very internet starved countries have a lot of reviews, and others have the opposite problem, we also notice that the US scores top in both.
+As we can see, some very internet starved countries have a lot of reviews, and others have the opposite problem, we also notice that the US scores top in both. Oh well, at least breweries randomly distributed their beers, otherwise we'd be in trouble.
+
+![Number of beers doesn't correlate to anything](/adapassets/beersperbrewery.png)
+
+Anyways, we've looked at the planet and we see that a lot of people think a lot of things, now let's be judgy about individual biases.
 
 ### Everyone is steeping but me
-Here, firstly, some metrics will be put in place in order to relate the users' reviews history with their personal preferences regarding beer style and/or beer country. They are initially thought to be intimately related to the scores the user gives on average for each beer style and each beer country, as well as the frequency that the user makes a review in each of these categories. Therefore, different variables can be generated for each user, regarding statistical metrics of both the *frequency* and *scores* of his/her reviews history, being related to its personal preferences in terms of beer style and country of origin.
-Then, using appropriate statistical tests, the relationship of these generated markers for individual preferences can be tested against other variables of interest. For example, to test whether individuals prefer beers from their own country, we can perform a statistical test between the individuals' metrics of "favorite beer country" against the individuals' own country of origin, to identify possible correlations not explainable by the null hypothesis.
-Finally, here we want to investigate whether the individuals' reviews of beers are affected by possible confounding factors, such as, whether there are reviewers in locations with limited access of various beer types/origins, which could possibly present a "distorted" view on the individual's preferences. Here, an initial idea is to compare the different metrics against themselves. E.g. to answer the question: *"Do individuals prefer beers from their own country because these are the ones they have access to?"*, we can confront the origin of the beers which are most frequently tested by the given individual with the origin of the beers which are most highly rated by the same individual. If they are not equal, this could indicate that the meaningful answer to the question above would be *"no"*.
+
+So, let's keep going with the lighthearted theme of jingoism!
+
+![People like whatever beer's at home](/adapassets/jingoism.png)
+
+As you can hardly see on that graph, the average beer reviewer has some light nationalistic tendencies, as such the dataset is completely corrupted by 20th century propaganda,but since we all are we can simply chug along and pretend this is normal.
 
 ### Fermenting attributes
 
-The data provided by one of the beer reviews website offers individual ratings for each of the following beer attribute: appearance, aroma, palate, taste. What we want to do here is to analyse if any of these attributes has a particularly stronger influence over the rating of the beer, and whether it varies over beer style or country. Here we must differentiate the overall rating which for the two dataset is the calculated based on the different attribute rating and the finale rating which is a rating of the beer provided by the user independently from all the other attributes rating. This why it is intersting to investigate the relation between the attribute rating and the final rating.
+With a bit of malt, linear regression, water, and dataframes we can extract the correlation between individual attribute rating and total ratings:
 
-In the notebook linear regression was made where teh four attributes are the features and the final rating is the outcome. We can see that a correlation exists for the general case (i.e. comparing all the beer styles and ratings). Analysis over a beer style basis also show a correlation and we can divide beer style to diffrent group. Finally analysis according the country/region of origin of the reviewer show a correlation and some insight was made concerning particular country.
-
-Indeed by analysing the coefficient of the regression anylsis of each attributes (i.e, beer attributes) and ploting it we can gain some insight regarding the impact of this correlation.
+![If beer tastes better it tastes better, whodathunkit](/adapassets/correlations.png)
 
 ### Beercommendation system
 
