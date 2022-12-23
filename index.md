@@ -5,12 +5,15 @@ Our goal is to determine objetively the completely bias-proof question of which 
 
 ## Methods
 
+We use SVD for the recommendation system, otherwise we rely on basic extraction and visualisation techniques, the dataset being rich enough for us to not need more complex mathematics.
 
 ### It's a lager world out there
 
-To begin with, it seems important to have a global vision of the repartition of breweries and users beforehand when analyzing if users usually prefer a beer from their own country. In fact, if the majority of the data are from the US, this would have an impact on our analysis.
-It will also be possible to see if the number of breweries in a country and the average of beers by country are corraleted with the 'enthousiasm' of users. In fact, it will help us to say, for the following, if a person preferences will be impacted by his region namely the choice of beers in the region and so what people drink in the country. A threshold on the number of reviews or grades can be used to define an “active” and "enthusiastic" user.
+So, first off, on top of all the reviews being written by biased folk, there's participation bias too, which is bad.
 
+![Internet and beer access rarely match](/adapassets/brewerybycountries.png)
+
+As we can see, some very internat starved countries have a lot of reviews, and others have the opposite problem, we also notice that the US scores top in both.
 
 ### Everyone is steeping but me
 Here, firstly, some metrics will be put in place in order to relate the users' reviews history with their personal preferences regarding beer style and/or beer country. They are initially thought to be intimately related to the scores the user gives on average for each beer style and each beer country, as well as the frequency that the user makes a review in each of these categories. Therefore, different variables can be generated for each user, regarding statistical metrics of both the *frequency* and *scores* of his/her reviews history, being related to its personal preferences in terms of beer style and country of origin.
@@ -47,7 +50,7 @@ The SVD method can be used to handle missing values in the ratings matrix, which
 
 ### Conclusion
 
-
+~~Cider tastes better actually~~
 
 ### Special thanks
 
@@ -57,4 +60,4 @@ We would especially like to thank for their contribution:
 
 -Robert west for giving us a chance to work on such a "unique" dataset.
 
--Budweiser for reminding us that anything can be beer if it believes hard enough. 
+-Budweiser for reminding us that anything can be beer if we believe hard enough. 
