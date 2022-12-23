@@ -50,6 +50,8 @@ It's in the notebook, go play with it, it was a lot of work.
 
 ~~Cider tastes better actually~~
 
+This is a very empty dataset, someone poured it wrong and it's all bubbles, cross-referencing it with population data, beer consumption by country, internet access, etc etc would let us say a lot more, our only real discovery is that people prefer what they ~~grew up with~~ discovered as young adults. But that does raise a nice point, that even if things seem obvious we need to actually check, data science is all about finding what should be one thing, yet isn't.
+
 ### Special thanks
 
 We would especially like to thank for their contribution:
