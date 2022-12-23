@@ -46,9 +46,11 @@ Finally, here we want to investigate whether the individuals' reviews of beers a
 
 ### Analysis of beer attributes
 
-The data provided by one of the beer reviews website offers individual ratings for each of the following beer attribute: appearance, aroma, palate, taste. What we want to do here is to analyse if any of these attributes has a particularly stronger influence over the overall rating of the beer, and whether it varies over beer style or country.
+The data provided by one of the beer reviews website offers individual ratings for each of the following beer attribute: appearance, aroma, palate, taste. What we want to do here is to analyse if any of these attributes has a particularly stronger influence over the rating of the beer, and whether it varies over beer style or country. Here we must differentiate the overall rating which for the two dataset is the calculated based on the different attribute rating and the finale rating which is a rating of the beer provided by the user independently from all the other attributes rating. This why it is intersting to investigate the relation between the attribute rating and the final rating.
 
-In the exploratory analysis provided in the notebook, a preliminary paired t-test was made for each attribute and final rating, for a sample the ratings available in the dataset. We can see that no trend exists for the general case (i.e. comparing all the beer styles and ratings). Throughout this project, this analysis will be extended with other statistical tests, to emcompass i) all the data from the ratings provided, ii) analysis over a beer style basis, to check if any of the beer attributes is more relevant in each case and iii) analysis according the country/region of origin of the reviewer, to check if there are any preferences which change accordingly.   
+In the notebook linear regression was made where teh four attributes are the features and the final rating is the outcome. We can see that a correlation exists for the general case (i.e. comparing all the beer styles and ratings). Analysis over a beer style basis also show a correlation and we can divide beer style to diffrent group. Finally analysis according the country/region of origin of the reviewer show a correlation and some insight was made concerning particular country.
+
+Indeed by analysing the coefficient of the regression anylsis of each attributes (i.e, beer attributes) and ploting it we can gain some insight regarding the impact of this correlation.
 
 ### Recommendation system
 
