@@ -1,4 +1,9 @@
-# Title: On the quest for beerfection
+# ada-2022-project-brian
+ada-2022-project-brian created by GitHub Classroom
+
+___
+
+# Title: What’s the perfect beer (for me) ?
 
 ## Abstract:
 The purpose of the program will be to use data from different sources of beer review websites to gain a larger understanding of how beer is appreciated around the world. One of the central topics revolves around detecting different trends in preferences and possible biases from beer consumers in different regions. Finally, the knowledge gained in this data analysis is planned to be applied in a recommendation model, in which the reader will be able to receive recommendations of his next “perfect beer”, dependent on information provided by him, such as beers already tried, preferred style of beer and origin.
@@ -41,9 +46,11 @@ Finally, here we want to investigate whether the individuals' reviews of beers a
 
 ### Analysis of beer attributes
 
-The data provided by one of the beer reviews website offers individual ratings for each of the following beer attribute: appearance, aroma, palate, taste. What we want to do here is to analyse if any of these attributes has a particularly stronger influence over the overall rating of the beer, and whether it varies over beer style or country.
+The data provided by one of the beer reviews website offers individual ratings for each of the following beer attribute: appearance, aroma, palate, taste. What we want to do here is to analyse if any of these attributes has a particularly stronger influence over the rating of the beer, and whether it varies over beer style or country. Here we must differentiate the overall rating which for the two dataset is the calculated based on the different attribute rating and the finale rating which is a rating of the beer provided by the user independently from all the other attributes rating. This why it is intersting to investigate the relation between the attribute rating and the final rating.
 
-In the exploratory analysis provided in the notebook, a preliminary paired t-test was made for each attribute and final rating, for a sample the ratings available in the dataset. We can see that no trend exists for the general case (i.e. comparing all the beer styles and ratings). Throughout this project, this analysis will be extended with other statistical tests, to emcompass i) all the data from the ratings provided, ii) analysis over a beer style basis, to check if any of the beer attributes is more relevant in each case and iii) analysis according the country/region of origin of the reviewer, to check if there are any preferences which change accordingly.   
+In the notebook linear regression was made where teh four attributes are the features and the final rating is the outcome. We can see that a correlation exists for the general case (i.e. comparing all the beer styles and ratings). Analysis over a beer style basis also show a correlation and we can divide beer style to diffrent group. Finally analysis according the country/region of origin of the reviewer show a correlation and some insight was made concerning particular country.
+
+Indeed by analysing the coefficient of the regression anylsis of each attributes (i.e, beer attributes) and ploting it we can gain some insight regarding the impact of this correlation.
 
 ### Recommendation system
 
@@ -55,20 +62,22 @@ According to Wikipedia : "A recommender system, or a recommendation system (some
 
 So the goal is here would be to recommend a beer for a user giving his past review, i.e., his "taste".
 
-There is plenty of way to implent this system. After searching for a method it seems that the user-based collaborative filtering looks like the way to do regarding our dataset.
+Singular Value Decomposition (SVD) is a matrix factorization technique that is often used in the field of recommendation systems to predict the ratings that users would give to items they have not yet rated.
 
-User-based collaborative filtering can be split in two step :
+In collaborative filtering, we try to predict the ratings that a user would give to an item based on the ratings that similar users have given to that item. One way to do this is to use SVD to decompose the ratings matrix into the product of three matrices: a user matrix, a singular matrix, and an item matrix.
 
-1) Look for users who share the same **rating** patterns with the active user (the user whom the prediction is for).
-2) Use the ratings from those like-minded users found in step 1 to **calculate a prediction** for the active user
-https://en.wikipedia.org/wiki/Collaborative_filtering#Methodology
+The user matrix and the item matrix both contain latent factors that represent the preferences of the users and the characteristics of the items, respectively. These latent factors are derived from the ratings matrix through the SVD process.
 
-The fist step use a k-NN algorithm to select the top K users who share the same rating patterns. To performs a k-NN one must choose two important parameters : k and the similarity metric.
+To make a prediction for a given user and item, we can take the dot product of the latent factors for that user and item. This dot product gives us a predicted rating for the user-item pair.
 
-The second step is based on the next formula to predict the rate of the active user x for a beer i rated by all the user y in K:
+The SVD method can be used to handle missing values in the ratings matrix, which is common in real-world recommendation systems where many users have not rated many items. By decomposing the ratings matrix into latent factors, we can fill in the missing values and make predictions for all the user-item pairs, even those that have not been rated.
 
-$$r_{x,i}={\bar {r_{x}}}+k{\sum \limits _{y\in K}}{\operatorname {simil}(x,y)}(r_{y,i}-{\bar {r_{y}}})$$
+## Setup and Instructions
 
-https://arxiv.org/abs/1301.7363
+In order for all results from the main jupyter notebook to be reproducible, this repository contains the datasets used in the analysis in the `/datasets` folder, except for the `reviews.txt` files of both beer databases (BeerAdvocate and RateBeer). These have proven to be too large to be store in the GitHub repository as they are, so further care had to be taken in order to unsure that the data contained in this file could still be used.
 
-Where $r_{x,i}$ is the predicted rate for beer i for the active user $x$, ${\bar {r_{x}}}$ is the mean vote for user $x$, $k$ is a normalizing vector, $\operatorname {simil} (x,y)$ is the Euclidean distance (to keep it simple) used in the k-NN algorithm to calculate the similarity (i.e, inverse of distance).
+For this reason, the dataset of reviews has to be read from a file stored locally (not contained in the repository), before rerunning the analysis where such data is needed. In order to do so, we provide python scripts, in the `/parse_reviews` folder, that take the location of the `reviews.txt` file, as well as the fields of the ratings to be parsed, and returns a `json` file with all the requested data properly parsed.
+
+As the text files are large (more than 165 million lines combined), in order to circunvent kernel freezes and other technical problems faced during the data analysis, we decided to split the parsed `json` files and zip them before loading them to memory in the pandas `DataFrames`. The splitting of the files is handled automatically in the `/parse_reviews/parse_reviews_with_file_split.py` python script, and the splitted datasets are loaded separetely, as seen in the main notebook.
+
+However, after this, all the data used in the data analysis can be directly loaded by running the code cells in the part of the analysis they belong to.
